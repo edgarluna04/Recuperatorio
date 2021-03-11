@@ -9,7 +9,7 @@ function mostrar()
 
     var mejorPromedioFisica
     var nombreMejorPromedioFisica;
-    flagMejorPromedio==true;
+    var flagMejorPromedio=true;
 
     var nombreAlumnaMasJoven;
 
@@ -23,10 +23,10 @@ function mostrar()
     var porcentajeSistemas;
 
     var masMateriasFisica;
-    flagFisica==true;
+    var flagFisica=true;
 
     var masMateriasSistemas;
-    flagSistemas==true;
+    var flagSistemas=true;
 
     var estudianteMasMaterias;
     var nombreEstudianteCursaMasMaterias;
@@ -34,7 +34,7 @@ function mostrar()
 
     var alumnaMasJoven;
     var edadAlumnaMasJoven;
-    flagAlumna==true;
+    var flagAlumna=true;
  
 
     for(var i=0;i<500;i++){
