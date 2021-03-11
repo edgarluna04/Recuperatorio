@@ -1,4 +1,5 @@
 
+
 function mostrar()
 {
 	var nombre;
@@ -7,9 +8,15 @@ function mostrar()
 	var puesto;
 	var sueldo;
 
-	var acumuladorSueldoProgramador=0;
-	var acumuladorSueldoAnalista=0;
-	var acumuladorSueldoQa=0;
+	var acumuladorSueldoProgramador;
+	var flagProgramador=true;
+
+	var acumuladorSueldoAnalista;
+	var flagAnalista=true;
+
+	var acumuladorSueldoQa;
+	var flagQa=true;
+
 
 	var promedioProgramador;
 	var promedioAnalista;
@@ -83,16 +90,28 @@ function mostrar()
 		switch(puesto){
 			case"programador":
 			contadorProgranadores++;
+			if(flagProgramador==true){
+				acumuladorSueldoProgramador=sueldo;
+				flagProgramador==false;
+			}
 			acumuladorSueldoProgramador+=sueldo;
 			break;
 
 			case"analista":
 			contadorAnalistas++;
+			if(flagAnalista==true){
+				acumuladorSueldoAnalista=sueldo;
+				flagAnalista==false;
+			}
 			acumuladorSueldoAnalista+=sueldo;
 			break;
 
 			case "qa":
 			contadorQa++;
+			if(flagQa==true){
+				acumuladorSueldoQa=sueldo;
+				flagQa==false;
+			}
 			acumuladorSueldoQa+=sueldo;
 			break;
 
@@ -108,9 +127,9 @@ function mostrar()
 			sexoEmpleadoMayorSueldo="femenino";
 		}
 
-		promedioAnalista=sueldoAnalista/contadorAnalistas;
-		promedioProgramador=sueldoProgramador/contadorProgranadores;
-		promedioQa=sueldoQa/contadorQa;
+		promedioAnalista=acumuladorSueldoAnalista/contadorAnalistas;
+		promedioProgramador=acumuladorSueldoProgramador/contadorProgranadores;
+		promedioQa=acumuladorSueldoQa/contadorQa;
 
 
 		continuar=confirm("Desea agregar otro empleado?")
